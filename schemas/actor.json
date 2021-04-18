@@ -1,0 +1,34 @@
+{
+    "required": [
+        "first_name",
+        "last_name",
+        "last_update"
+    ],
+    "additionalProperties": false,
+    "properties": {
+        "first_name": {
+            "title": "First_name",
+            "type": "string",
+            "default": "",
+            "examples": [
+                "THORA"
+            ]
+        },
+        "last_name": {
+            "title": "Last_name",
+            "type": "string",
+            "default": "",
+            "examples": [
+                "TEMPLE"
+            ]
+        },
+        "last_update": {
+            "title": "Last_update",
+            "type": "string",
+            "default": "",
+            "examples": [
+                "2006-02-14"
+            ]
+        }
+    }
+}
