@@ -30,7 +30,7 @@ app.use('/api/actor', require('./routes/actor.route'));
 app.use('/api/user', require('./routes/user.route'));
 app.use('/api/auth', require('./routes/auth.route'));
 
-const swaggerDocs = swaggerJsDoc(swagOption());
+const swaggerDocs = swaggerJsDoc(swagOption);
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 

@@ -16,6 +16,4 @@ const swaggerOptions = {
   };
 
 
-module.exports = ()=>{
-  return swaggerOptions;
-}
+module.exports = swaggerOptions;
