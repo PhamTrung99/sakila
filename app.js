@@ -6,6 +6,7 @@ require('express-async-errors');
 const swagOption = require('./swagger/swaggerOptions');
 const swaggerJsDoc = require("swagger-jsdoc");
 const swaggerUi = require("swagger-ui-express");
+const { use } = require('express/lib/router');
 
 if (process.env.NODE_ENV !== 'production') { // Nếu app không ở trong chế độ production
   require('dotenv').config(); //Dòng này cho phép đọc file .env 
@@ -29,7 +30,7 @@ app.use('/api/actor', require('./routes/actor.route'));
 app.use('/api/user', require('./routes/user.route'));
 app.use('/api/auth', require('./routes/auth.route'));
 
-const swaggerDocs = swaggerJsDoc(swagOption);
+const swaggerDocs = swaggerJsDoc(swagOption());
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 

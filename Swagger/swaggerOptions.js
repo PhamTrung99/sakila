@@ -15,4 +15,7 @@ const swaggerOptions = {
     apis: ["app.js"]
   };
 
-module.exports = swaggerOptions;
+
+module.exports = ()=>{
+  return swaggerOptions;
+}
