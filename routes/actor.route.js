@@ -4,9 +4,6 @@ const validateMdw = require('../middlewares/validate.mdw');
 const schemaActor = require('../schemas/actor.json');
 const authMdw = require('../middlewares/auth.mdw');
 
-const PQueue = require('p-queue');
-const queue = new PQueue({concurrency: 1});
-
 const router = express.Router();
 
 router.use('/',authMdw); //Xác thực Token 
